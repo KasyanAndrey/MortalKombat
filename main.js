@@ -20,6 +20,9 @@ const player2 = {
   },
 };
 // ------------------
+
+const arenasEl = document.querySelector(".arenas");
+
 function createPlayer(players) {
   const playerEl = document.createElement("div");
   playerEl.classList.add(players.id);
@@ -44,8 +47,6 @@ function createPlayer(players) {
   characterEl.append(imgEl);
   progressbarEl.append(lifeEl, nameEl);
   playerEl.append(progressbarEl, characterEl);
-
-  const arenasEl = document.querySelector(".arenas");
   arenasEl.append(playerEl);
 
   return arenasEl;
